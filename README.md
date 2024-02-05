@@ -10,17 +10,16 @@ This project implements a user signup process integrated with Stripe for creatin
 ### Setup
 
 #### Installing Java JDK 21.0.2:
-- [Download Java JDK 21.0.2](<Java_JDK_21.0.2_Link>)
+- [Download Java JDK 21.0.2](<https://www.azul.com/downloads/?package=jdk#zulu>)
 
 #### Downloading Temporal CLI for Windows:
 - Choose the appropriate binary for your system:
-  - For Windows amd64: [Download link](<Temporal_CLI_Windows_amd64_Download_link>)
-  - For Windows arm64: [Download link](<Temporal_CLI_Windows_arm64_Download_link>)
+  - For Windows (<https://docs.temporal.io/cli#install>)
 - Extract the Archive and add the path to the temporal.exe binary to your system's PATH environment variable.
 - Verify Configuration: Open a new Command Prompt window and type `temporal` to verify accessibility.
 
 #### Install Docker Desktop:
-- [Download Docker Desktop](<Docker_Desktop_Link>)
+- [Download Docker Desktop](<https://docs.docker.com/get-docker/>)
 
 ---
 
