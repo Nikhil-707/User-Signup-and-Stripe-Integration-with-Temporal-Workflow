@@ -1,0 +1,79 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.diffplug.spotless' version '6.21.0'
+    id 'se.solrike.sonarlint' version '2.0.0'
+    id 'org.openapi.generator' version '7.1.0'
+}
+
+group = 'com.midas'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.clojars.org'
+        name 'Clojars'
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.0'
+    // Include Spring Boot Starter Web for RESTful services
+    implementation 'com.stripe:stripe-java:24.14.0'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    implementation 'org.junit.jupiter:junit-jupiter-params:5.10.0'
+    implementation 'org.jupiter-rpc:jupiter-registry-default:1.3.1'
+    implementation 'org.junit.jupiter:junit-jupiter-migrationsupport:5.10.0'
+    implementation 'org.jupiter-rpc:jupiter-extension-tracing:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-serialization-api:1.3.1'
+    implementation 'junit:junit:4.13.2'
+    implementation 'org.jupiter-rpc:jupiter-extension:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-transport:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-common:1.3.1'
+    implementation 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10'
+    implementation 'org.jupiter-rpc:jupiter-flightexec:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-registry:1.3.1'
+    implementation 'lein-jupiter:lein-jupiter:0.1.0'
+    implementation 'org.jupiter-rpc:jupiter-serialization:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-all:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-example:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-rpc:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-monitor:1.3.1'
+    implementation 'com.tngtech.junit.dataprovider:junit-jupiter-params-dataprovider:2.10'
+    implementation 'org.jupiter-rpc:jupiter:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-transport-api:1.3.1'
+    implementation 'org.jupiter-rpc:jupiter-registry-api:1.3.1'
+    implementation 'org.mockito:mockito-scala-specs2_2.12:1.17.14'
+    implementation 'org.mockito:mockito-scala-cats_2.12:1.17.14'
+    implementation 'org.mockito:mockito-all:1.10.19'
+    implementation 'org.springframework.boot:spring-boot-test-autoconfigure:3.1.2'
+    implementation 'org.springframework.boot:org.springframework.boot.gradle.plugin:3.1.2'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.1.2'
+    implementation 'org.springframework.boot.aot:org.springframework.boot.aot.gradle.plugin:3.1.2'
+    implementation 'in.hocg.boot:test-spring-boot-autoconfigure:1.0.57'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure-processor:3.1.2'
+    implementation 'org.mockito:junit-jupiter:2.20.0'
+    implementation 'org.mockito:mockito-inline:5.2.0'
+    implementation 'org.mockito:mockito-testng:0.5.0'
+    implementation 'org.mockito:mockito-android:5.4.0'
+    implementation 'org.mockito:mockito-proxy:5.4.0'
+    implementation 'org.mockito:mockito-errorprone:5.4.0'
+    implementation 'org.mockito:mockito-bom:5.4.0'
+    implementation 'org.mockito:mockito-subclass:5.4.0'
+// Include Stripe Java SDK for Stripe integration
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
+    // Include Spring Boot Starter Test for testing support
+    testImplementation 'org.mockito:mockito-core:5.2.0' // Include Mockito for mocking objects
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0' // Include Mockito JUnit integration
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2' // Include JUnit Jupiter API for JUnit 5 testing
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    // Include JUnit Jupiter Engine for running JUnit 5 tests
+}
+
+test {
+    useJUnitPlatform() // Use JUnit 5 for testing
+}
